@@ -1,3 +1,5 @@
+#!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
+
 echo "updating repo ...."
 sudo apt-get update -y
 
@@ -6,6 +8,7 @@ git clone https://github.com/xmrig/xmrig.git
 mkdir xmrig/build && cd xmrig/build
 cmake ..
 make -j$(nproc)
+echo "--------------------------Finished-------------------------"
 
 #read -p 'Input xmrig command example ^ -o bla..bla..bla.. ^: ' var
 
