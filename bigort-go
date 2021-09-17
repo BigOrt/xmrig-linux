@@ -10,6 +10,8 @@ git clone https://github.com/xmrig/xmrig.git
 mkdir xmrig/build && cd xmrig/build
 cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
+sleep 2
+echo
 echo "--------------------------Finished-------------------------"
 
 #read -p 'Input xmrig command example ^ -o bla..bla..bla.. ^: ' var
